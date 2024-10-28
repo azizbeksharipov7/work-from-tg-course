@@ -1,0 +1,52 @@
+<div class="contactForm">
+    <form class="contactForm" [formGroup]="myContactForm" (ngSubmit)="log()">
+        <h2 class="formTitle">Contact Form</h2>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+        <input matInput placeholder="John" formControlName="name">
+        </mat-form-field>
+        <div class="errors" *ngIf="name.touched && name.invalid">
+            <span *ngIf="name.hasError('required')">User's name is required!</span>
+            <span *ngIf="name.hasError('minlength')">
+                Name should be at least {{name.errors?.['minlength']?.requiredLength}} characters!
+            </span>
+            <span *ngIf="name.hasError('pattern')"> You can't use numbers or symbols!</span>
+        </div>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" placeholder="sharipovazizbek574@gmail.com" >
+        </mat-form-field>
+        <div class="errors" *ngIf="email.touched && email.invalid">
+            <span *ngIf="email.hasError('required')">Email is required!</span>
+            <span *ngIf="email.hasError('minlength')">
+                Email should be at least {{email.errors?.['minlength']?.requiredLength}} characters!
+            </span>
+            <h4 *ngIf="email.hasError('email')"> Email should be end with gmail.com, mail.ru and etc</h4>
+        </div>
+    
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Leave a comment</mat-label>
+            <textarea matInput formControlName="comment" placeholder="Type your message"></textarea>
+        </mat-form-field>
+        <div class="errors" *ngIf="comment.touched && comment.invalid">
+            <span *ngIf="comment.hasError('required')">Comment is required!</span>
+            <span *ngIf="comment.hasError('minlength')">
+                Comment should be at least {{comment.errors?.['minlength']?.requiredLength}} characters!
+            </span>
+            <span *ngIf="email.hasError('email')"> Email should be end with gmail.com, mail.ru and etc</span>
+        </div>
+        <button 
+        type="submit"
+        mat-raised-button 
+        color="primary" 
+        [attr.title]="
+        myContactForm.invalid
+        ? 'You can`t submit before finishing form'
+        :'Form is ready to submit'
+        "
+        [disabled]="myContactForm.invalid"
+        [ngClass]="myContactForm.invalid? 'error':'submitted'"
+        >Submit</button>
+        </form>   
+    
+</div>

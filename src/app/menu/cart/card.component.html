@@ -1,0 +1,25 @@
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>{{product.title}}</mat-card-title>
+    </mat-card-header>
+   <div class="img-container">
+    <img mat-card-image class="cart-image" [src]="product.img_url" alt="Photo of a Shiba Inu">
+   </div>
+    <mat-card-content>
+      <p>{{product.desc}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <h5 class="m-0"> {{product.price -(product.price/100*product.sale) | currency}} </h5>
+      <i class="sale" *ngIf="product.sale>0"> {{product.price | currency}} </i>
+      <div class="space"></div>
+        <button mat-flat-button class="shopping_cart" (click)="addToCart()">
+          <mat-icon >add_shopping_cart</mat-icon> +1
+      </button>
+      <button mat-icon-button color="warn" class="favorite-btn" >
+        <mat-icon >favorite</mat-icon>
+    </button>
+     
+    </mat-card-actions>
+  </mat-card>
+
+  <div #add class="addingAnimation">+1</div>

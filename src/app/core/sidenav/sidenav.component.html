@@ -1,0 +1,45 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="'navigation'" [mode]="'push'" [opened]="false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/menu">Menu</a>
+      <a mat-list-item routerLink="/contact"  routerLinkActive="routerLinkActive" >Contact</a>
+      <a mat-list-item routerLink="cart"  routerLinkActive="routerLinkActive" >Cart</a>
+      <a mat-list-item routerLink="profile"  routerLinkActive="routerLinkActive" >Profile</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="toolbar">
+
+      <button type="button" id="toggle-button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+
+        <mat-icon class="burger-menu">menu</mat-icon>
+      </button>
+
+      <span class="side-name">Burger Order</span>
+
+      <div class="space"></div>
+
+      <div class="link-container">
+        <!-- <a class="nav-link">Order burger</a> -->
+        <a class="nav-link" routerLink="menu" routerLinkActive="active">Menu</a>
+        <a class="nav-link" routerLink="contact" routerLinkActive="active" >Contact</a>
+        <a class="nav-link cart" routerLink="cart" routerLinkActive="active" > Cart <mat-icon>shopping_cart</mat-icon>
+        <span *ngIf="quantity > 0" class="quantity">{{quantity}}</span> </a>
+        <a class="nav-link" routerLink="profile" routerLinkActive="active" *ngIf="isUserLoggedIn; else login" >Profile</a>
+        <ng-template #login>
+          <a class="nav-link" routerLink="login" routerLinkActive="active"  >Login</a>
+        </ng-template>
+
+      </div>
+
+    </mat-toolbar>
+    <br>
+    <!-- Add Content Here -->
+
+
+
+    <ng-content></ng-content>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

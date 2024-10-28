@@ -1,0 +1,25 @@
+<div class="register">
+    <form [formGroup]="form">
+        <button class="withGoogle">With Google</button>
+        <label for="username">Username</label>
+        <input formControlName="username" type="text" name="userName" class="user-name"
+        [class.valid]="form?.controls?.['username']?.valid && form?.controls?.['username']?.touched"
+        [class.invalid]="form?.controls?.['username']?.invalid && form?.controls?.['username']?.touched"
+        />
+
+        <label for="password">Password</label>
+        <input type="password"
+        formControlName="password"
+        name="password"
+        class="password"        
+        />
+        <label for="form-check-label">
+            <input type="checkbox" name="" class="form-check-input"/>
+            Remember me
+        </label>
+        <p>I want to  <a href="#">reset my password</a>
+        </p>
+        <button (click)="test()">TESSSTS</button>
+        <button class="login-enter">Enter !</button>
+    </form>
+</div>

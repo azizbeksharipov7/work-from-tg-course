@@ -1,0 +1,27 @@
+<div class="container">
+    <mat-tab-group animationDuration="0ms">
+        <mat-tab label="Fast Food">
+            <ng-container *ngFor="let fast_food of fast_foods">
+              <app-card  [product]="fast_food"></app-card>
+            </ng-container>
+        </mat-tab>
+        <mat-tab label="Burger Set">
+          <ng-container *ngFor="let burger_set of burger_sets">
+            <app-card  [product]="burger_set"></app-card>
+          </ng-container>
+        </mat-tab>
+        <mat-tab label="Beverage">
+          <ng-container *ngFor="let beverage of beverages">
+          <app-card   [product]="beverage"></app-card>
+        </ng-container>
+      </mat-tab>
+      </mat-tab-group>
+
+      <!-- <button #paq>Paqapaq</button>  -->
+</div>
+
+
+
+<!-- <div class="added">
+    //gsap you tube
+</div> -->

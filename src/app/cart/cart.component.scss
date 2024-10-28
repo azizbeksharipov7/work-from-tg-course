@@ -1,0 +1,177 @@
+// // * {
+// //     margin: 0;
+// //     padding: 0;
+// //     box-sizing: border-box;
+// // }
+
+.cart-container{
+margin: 20px;
+ display: flex; 
+ gap: 10px;
+}
+// .titleBox{
+//   font-weight: bold;
+// }
+
+// .cartBox{
+//     font-family: Arial, sans-serif;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 20px;
+//     border-radius: 8px;
+//     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+   
+//     width: 100%;
+//     border-collapse: collapse;
+    
+// }
+
+.order-summary {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-summary h3 {
+    margin-bottom: 20px;
+  }
+  
+  .order-summary p {
+    margin: 10px 0;
+  }
+  
+  .order-summary a {
+    display: block;
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .order-summary button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .order-summary button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // .cart-box {
+// //     width: 400px;
+// //     display: flex;
+// //     flex-direction: column;
+// //     align-items: center;
+// //     justify-content: space-between;
+// //     box-shadow: 0 2px 2px #0a10143d, 0 0 2px #0a10141f;
+// //     border-radius: 5px;
+// //     margin: 15px;
+// // }
+
+// // .cart-title{
+// //     color: royalblue;
+// //     text-align: center;
+// //     display: inline-block;
+// //     margin: 50px 50px 25px 50px;
+// // }
+
+// // .cart-desc{
+// //     text-align: center;
+// //     margin:25px 50px 50px 50px;
+// // }
+
+// // .cart-footer{
+// //     background-color: #1976d21a;
+// //     display: flex;
+// //     justify-content: flex-end;
+// //     align-items: center;
+// //     padding: 10px;
+// //     width: 95%;
+// //     p{
+// //         color: royalblue;
+// //     }
+// // }
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+table {
+  width: 80%;
+  margin: 50px auto;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+tbody td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+input[type="text"] {
+  width: 30px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.remove-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ff0000;
+}
+
+.remove-btn:hover {
+  color: #cc0000;
+}
