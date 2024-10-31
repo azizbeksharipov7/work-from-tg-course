@@ -10,7 +10,7 @@ import { ContactModule } from './contact/contact.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './auth/login/login.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient } from '@angular/common/http';
 import { AuthInterceptor } from './auth/interceptors/auth.interceptor';
 import { ServiceWorkerModule } from '@angular/service-worker';
 @NgModule({
@@ -34,8 +34,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor, multi:true},
+    provideHttpClient(),
     provideClientHydration(),
     provideAnimationsAsync()
+    
   ],
   bootstrap: [AppComponent]
 })

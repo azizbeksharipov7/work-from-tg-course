@@ -18,8 +18,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
 
   @ViewChild('addAnimation', { static: true }) addAnimation!: ElementRef;
   @ViewChild('quantityBox', { static: true }) quantityBox!: ElementRef
-  constructor(private animateService: AnimateService, private cartService: CartService, private authService:AuthService) {
-  }
+  constructor(private animateService: AnimateService, private cartService: CartService, private authService:AuthService) {}
 
   ngOnInit(): void {
     this.authService.isUserLoggedIn.subscribe(state=>{
